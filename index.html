@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Closari — AI WhatsApp, bukan auto-reply</title>
+<meta name="description" content="Closari duduk di nomor WhatsApp Anda. Yang chat disaring, dijawab sesuai aturan harga Anda, diambil DP-nya lewat QRIS. Oper ke admin cuma kalau diminta.">
+<link rel="canonical" href="https://lp.closari.id/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Closari">
+<meta property="og:locale" content="id_ID">
+<meta property="og:url" content="https://lp.closari.id/">
+<meta property="og:title" content="Kalau bisnis Anda hidup dari WhatsApp, baca ini.">
+<meta property="og:description" content="Closari duduk di nomor WhatsApp Anda: yang chat disaring, dijawab sesuai aturan harga Anda, DP diambil lewat QRIS. 14 hari gratis, lalu Rp 2.000 per pesan keluar. Setup Rp 0.">
+<meta property="og:image" content="https://lp.closari.id/assets/og-v2.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Closari — Kalau bisnis Anda hidup dari WhatsApp, baca ini. 14 hari gratis, lalu Rp 2.000 per pesan keluar.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalau bisnis Anda hidup dari WhatsApp, baca ini.">
+<meta name="twitter:description" content="Closari duduk di nomor WhatsApp Anda: yang chat disaring, dijawab sesuai aturan harga Anda, DP diambil lewat QRIS. 14 hari gratis, lalu Rp 2.000 per pesan keluar. Setup Rp 0.">
+<meta name="twitter:image" content="https://lp.closari.id/assets/og-v2.jpg">
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/assets/react.production.min.js"></script>
+<script src="/assets/react-dom.production.min.js"></script>
+<script src="/assets/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics=""><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"><style>body{margin:0;background:#f7f5f0;font-family:Figtree,system-ui,sans-serif;color:#17181a;-webkit-font-smoothing:antialiased}a{color:oklch(0.42 0.12 150)}a:hover{color:oklch(0.32 0.1 150)}input,select,button{font-family:inherit}@keyframes bubbleIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}@keyframes typing{0%,80%,100%{opacity:.25}40%{opacity:1}}@keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}</style><script src="/assets/image-slot.js"></script></helmet>
+
+<!-- HERO · full-bleed painted sky, windows rising, sky darkens on scroll -->
+<section id="top" data-screen-label="Hero" style="position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#1a2340;color:#fff">
+<div style="position:absolute;inset:0"><image-slot id="hero-sky" shape="rect" src="{{ rSkyDusk }}" placeholder="Ilustrasi: langit Jakarta senja"></image-slot></div>
+<video ref="{{ videoRef }}" preload="metadata" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" poster="{{ rSkyDusk }}" src="{{ rHeroVideo }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,#05081a 0%,#0b1230 55%,rgba(11,18,48,.2) 100%);opacity:{{ nightOpacity }};transition:opacity .15s linear;pointer-events:none"></div>
+<div style="position:absolute;inset:0;background:radial-gradient(60% 40% at 50% 100%,rgba(0,0,0,.55),transparent 70%);pointer-events:none"></div>
+
+<div style="position:relative;max-width:1120px;width:100%;margin:0 auto;padding:0 24px;box-sizing:border-box;display:flex;align-items:center;gap:22px;height:64px;font:500 14px Figtree;color:rgba(255,255,255,.8);flex-wrap:wrap" data-screen-label="Nav">
+<span style="font:600 18px 'Source Serif 4',Georgia,serif;color:#fff">Closari</span>
+<a href="#industri" style="color:inherit;text-decoration:none">Industri</a><a href="#bandingkan" style="color:inherit;text-decoration:none">Bandingkan</a><a href="#harga" style="color:inherit;text-decoration:none">Harga</a><a href="#faq" style="color:inherit;text-decoration:none">FAQ</a>
+<a href="{{ waHref }}" style="margin-left:auto;background:#fff;color:#17181a;text-decoration:none;font:600 13px Figtree;padding:9px 14px;border-radius:9px">Chat AI</a>
+</div>
+
+<div style="position:relative;max-width:1120px;width:100%;margin:0 auto;padding:40px 24px 0;box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:start">
+<div style="animation:riseIn .8s .1s both">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:oklch(0.75 0.17 150)"></span><span style="font:600 12px Figtree;color:rgba(255,255,255,.75);letter-spacing:.02em">AI WhatsApp, bukan auto-reply</span></div>
+<h1 style="font:600 clamp(34px,4.6vw,60px)/1.04 'Source Serif 4',Georgia,serif;letter-spacing:-.015em;text-wrap:pretty;margin:0;text-shadow:0 2px 24px rgba(0,0,0,.25)">Kalau bisnis Anda hidup dari WhatsApp,<br>baca ini.</h1>
+</div>
+<div style="animation:riseIn .8s .3s both;padding-top:clamp(0px,2vw,28px)">
+<p style="font:16px/1.5 Figtree;color:rgba(255,255,255,.85);margin:0 0 20px;text-wrap:pretty;max-width:440px">Closari duduk di nomor WhatsApp Anda. Yang chat disaring, dijawab sesuai aturan harga Anda, diambil DP-nya lewat QRIS. Oper ke admin cuma kalau diminta.</p>
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+<a href="{{ waHref }}" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#17181a;text-decoration:none;font:600 15px Figtree;padding:13px 20px;border-radius:11px"><span style="width:16px;height:16px;border-radius:50%;background:oklch(0.62 0.17 150);display:inline-block"></span>Chat di WhatsApp</a>
+<a href="#harga" style="font:500 14px Figtree;color:rgba(255,255,255,.8);text-decoration:underline;text-underline-offset:3px">Lihat harga</a>
+</div>
+<div style="font:12.5px/1.5 Figtree;color:rgba(255,255,255,.6);margin-top:12px;max-width:440px">14 hari gratis, lalu Rp 2.000 per pesan keluar. Chat pertama sudah kami siapkan.</div>
+</div>
+</div>
+
+<div style="position:relative;max-width:1120px;width:100%;margin:auto auto 0;padding:48px 24px 0;box-sizing:border-box;display:flex;justify-content:center;align-items:flex-end;gap:0;transform:translateY({{ riseY }}px);transition:transform .15s linear">
+<sc-if value="{{ isDock }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:8%;top:34px;display:{{ sideDisplay }};flex-direction:column;align-items:flex-start;gap:4px;font:500 13px 'Source Serif 4',Georgia,serif;font-style:italic;color:rgba(255,255,255,.85);animation:riseIn .9s 1.2s both"><span>AI yang balas,</span><span>bukan admin begadang.</span><span style="font:400 20px Figtree;transform:rotate(20deg);margin-left:120px">↘</span></div>
+<div style="position:absolute;right:8%;top:120px;display:{{ sideDisplay }};flex-direction:column;align-items:flex-end;gap:4px;font:500 13px 'Source Serif 4',Georgia,serif;font-style:italic;color:rgba(255,255,255,.85);text-align:right;animation:riseIn .9s 1.5s both"><span style="font:400 20px Figtree;transform:rotate(-160deg);margin-right:100px">↘</span><span>DP QRIS di chat yang sama</span></div></sc-if>
+<sc-if value="{{ isDevices }}" hint-placeholder-val="{{ false }}"><div style="display:{{ sideDisplay }};flex:0 0 250px;background:#17181a;border-radius:18px;padding:10px;margin-right:-18px;margin-bottom:24px;box-shadow:0 30px 60px rgba(0,0,0,.35);animation:riseIn .9s .5s both;position:relative;z-index:1"><div style="background:#fff;color:#17181a;border-radius:10px;padding:12px;font:11.5px/1.35 Figtree;height:230px;overflow:hidden">
+<div style="font:600 11px Figtree;color:rgba(0,0,0,.5);margin-bottom:10px">Inbox · malam ini</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 812-xxxx-xx31</strong><br><span style="color:rgba(0,0,0,.55)">yg buat rahang tirus brp…</span></span><span style="color:rgba(0,0,0,.4)">21:41</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 857-xxxx-xx08</strong><br><span style="color:oklch(0.42 0.12 150)">✓✓ DP masuk · booking terkunci</span></span><span style="color:rgba(0,0,0,.4)">21:12</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 821-xxxx-xx77</strong><br><span style="color:rgba(0,0,0,.55)">Siap, Sabtu 10.00 ya kak.</span></span><span style="color:rgba(0,0,0,.4)">20:48</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 878-xxxx-xx52</strong><br><span style="color:rgba(0,0,0,.55)">ada promo gak kak?</span></span><span style="color:rgba(0,0,0,.4)">20:31</span></div>
+</div></div></div></sc-if>
+<sc-if value="{{ isFan }}" hint-placeholder-val="{{ true }}"><div style="display:{{ sideDisplay }};flex:0 0 230px;background:#fff;color:#17181a;border-radius:16px 16px 0 0;padding:14px;margin-right:-26px;margin-bottom:-18px;transform:rotate(-3deg);transform-origin:bottom right;box-shadow:0 30px 60px rgba(0,0,0,.35);animation:riseIn .9s .5s both;font:12px/1.35 Figtree;height:300px;overflow:hidden">
+<div style="font:600 11px Figtree;color:rgba(0,0,0,.5);margin-bottom:10px">Inbox · malam ini</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 812-xxxx-xx31</strong><br><span style="color:rgba(0,0,0,.55)">yg buat rahang tirus brp…</span></span><span style="color:rgba(0,0,0,.4)">21:41</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 857-xxxx-xx08</strong><br><span style="color:oklch(0.42 0.12 150)">✓✓ DP masuk · booking terkunci</span></span><span style="color:rgba(0,0,0,.4)">21:12</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 821-xxxx-xx77</strong><br><span style="color:rgba(0,0,0,.55)">Siap, Sabtu 10.00 ya kak.</span></span><span style="color:rgba(0,0,0,.4)">20:48</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 878-xxxx-xx52</strong><br><span style="color:rgba(0,0,0,.55)">ada promo gak kak?</span></span><span style="color:rgba(0,0,0,.4)">20:31</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span><strong>+62 813-xxxx-xx90</strong><br><span style="color:rgba(0,0,0,.55)">ini aman ga buat saya…</span></span><span style="color:rgba(0,0,0,.4)">09:10</span></div>
+</div>
+</div></sc-if>
+<div style="position:relative;z-index:2;flex:0 1 560px;min-width:0;background:#fff;color:#17181a;border-radius:18px 18px 0 0;padding:16px 18px 18px;box-shadow:0 30px 80px rgba(0,0,0,.45);animation:riseIn .9s .35s both">
+<div style="display:flex;justify-content:space-between;align-items:center;font:600 12px Figtree;color:rgba(0,0,0,.55);margin-bottom:14px"><span>Closari · AI · +62 812-xxxx-xx31</span><span style="color:oklch(0.42 0.12 150)">● owner sedang menyetir</span></div>
+<div style="display:flex;flex-direction:column;gap:9px;font:14px/1.4 Figtree">
+<div style="align-self:flex-start;max-width:80%;background:#f1efe9;padding:9px 13px;border-radius:12px 12px 12px 4px;animation:bubbleIn .5s .2s both">halo ini masih buka? liat iklan ig <span style="font-size:10px;color:rgba(0,0,0,.4)">21:41</span></div>
+<div style="align-self:flex-start;max-width:80%;background:#f1efe9;padding:9px 13px;border-radius:12px 12px 12px 4px;animation:bubbleIn .5s .9s both">yg buat rahang tirus brp ya kak, btw lokasi dmn</div>
+<div style="display:flex;gap:8px;align-items:flex-start;justify-content:flex-end;animation:bubbleIn .5s 1.9s both"><span style="font:600 10px Figtree;color:oklch(0.42 0.12 150);background:oklch(0.96 0.03 150);padding:3px 7px;border-radius:99px;margin-top:7px;white-space:nowrap">KUALIFIKASI</span><div style="max-width:78%;background:oklch(0.93 0.06 150);padding:9px 13px;border-radius:12px 12px 4px 12px">Halo, saya Rani dari Vestra. Biar cepat: yang ingin dibahas area rahang ya? Nanti dokter yang menentukan treatment-nya saat konsultasi.</div></div>
+<div style="align-self:flex-start;max-width:80%;background:#f1efe9;padding:9px 13px;border-radius:12px 12px 12px 4px;animation:bubbleIn .5s 3s both">ramping aja, gak mau bengkak</div>
+<div style="align-self:flex-start;max-width:80%;background:#f1efe9;padding:9px 13px;border-radius:12px 12px 12px 4px;animation:bubbleIn .5s 3.7s both">tapi kok lebih mahal dari klinik sebelah ya</div>
+<div style="display:flex;gap:8px;align-items:flex-start;justify-content:flex-end;animation:bubbleIn .5s 4.8s both"><span style="font:600 10px Figtree;color:oklch(0.42 0.12 150);background:oklch(0.96 0.03 150);padding:3px 7px;border-radius:99px;margin-top:7px;white-space:nowrap">JAWAB KEBERATAN</span><div style="max-width:78%;background:oklch(0.93 0.06 150);padding:9px 13px;border-radius:12px 12px 4px 12px">Wajar dibandingkan. Harga kami sudah termasuk konsultasi dokter dan satu kunjungan kontrol. Detail medisnya dokter yang jelaskan saat konsultasi.</div></div>
+<div style="align-self:flex-start;max-width:80%;background:#f1efe9;padding:9px 13px;border-radius:12px 12px 12px 4px;animation:bubbleIn .5s 5.9s both">oke DP aja dulu</div>
+<div style="display:flex;gap:8px;align-items:flex-start;justify-content:flex-end;animation:bubbleIn .5s 6.9s both"><span style="font:600 10px Figtree;color:oklch(0.42 0.12 150);background:oklch(0.96 0.03 150);padding:3px 7px;border-radius:99px;margin-top:7px;white-space:nowrap">DP VIA QRIS</span><div style="max-width:78%;background:oklch(0.93 0.06 150);padding:9px 13px;border-radius:12px 12px 4px 12px">Siap. Slot Kamis 16.00, Vestra Senopati. DP lewat QRIS di bawah.</div></div>
+<div style="align-self:center;font:600 12px Figtree;color:oklch(0.42 0.12 150);background:oklch(0.96 0.03 150);padding:6px 12px;border-radius:99px;margin-top:4px;animation:bubbleIn .5s 8s both">✓✓ DP masuk · booking Kamis 16.00 terkunci</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><div style="font:11px Figtree;color:rgba(0,0,0,.4)">Chat: contoh fiktif, klinik aesthetic. Tidak ada klaim hasil atau saran medis.</div><div style="display:flex;gap:3px;align-items:center;font:11px Figtree;color:rgba(0,0,0,.45)">AI membalas<span style="display:inline-flex;gap:2px;margin-left:4px"><span style="width:4px;height:4px;border-radius:50%;background:oklch(0.42 0.12 150);animation:typing 1.2s 0s infinite"></span><span style="width:4px;height:4px;border-radius:50%;background:oklch(0.42 0.12 150);animation:typing 1.2s .2s infinite"></span><span style="width:4px;height:4px;border-radius:50%;background:oklch(0.42 0.12 150);animation:typing 1.2s .4s infinite"></span></span></div></div>
+</div>
+<sc-if value="{{ isDevices }}" hint-placeholder-val="{{ false }}"><div style="display:{{ sideDisplay }};flex:0 0 150px;background:#17181a;border-radius:26px;padding:8px;margin-left:-18px;margin-bottom:40px;box-shadow:0 30px 60px rgba(0,0,0,.35);animation:riseIn .9s .65s both;position:relative;z-index:3"><div style="background:#f7f5f0;color:#17181a;border-radius:20px;padding:14px 10px;font:11px/1.35 Figtree;height:250px;overflow:hidden;display:flex;flex-direction:column;gap:8px">
+<div style="width:40px;height:5px;border-radius:3px;background:rgba(0,0,0,.15);margin:0 auto 4px"></div>
+<div style="font:600 10px Figtree;color:rgba(0,0,0,.5)">Klinik Vestra</div>
+<div style="align-self:flex-end;max-width:92%;background:oklch(0.93 0.06 150);padding:6px 8px;border-radius:9px 9px 3px 9px">DP lewat QRIS di bawah.</div>
+<div style="align-self:flex-end;width:92%;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:9px;padding:8px;display:flex;flex-direction:column;align-items:center;gap:4px"><div style="width:56px;height:56px;background:repeating-linear-gradient(90deg,#17181a 0 3px,transparent 3px 6px),repeating-linear-gradient(0deg,#17181a 0 3px,transparent 3px 6px);background-blend-mode:multiply;opacity:.85;border-radius:3px"></div><div style="font:600 9px Figtree;color:rgba(0,0,0,.6)">QRIS · DP booking</div></div>
+<div style="align-self:center;font:600 9.5px Figtree;color:oklch(0.42 0.12 150);background:oklch(0.96 0.03 150);padding:4px 8px;border-radius:99px;animation:bubbleIn .5s 7.5s both">✓✓ DP masuk</div>
+</div></div></sc-if>
+</div>
+<sc-if value="{{ isDock }}" hint-placeholder-val="{{ false }}"><div style="position:relative;max-width:1120px;width:100%;margin:0 auto;padding:0 24px 22px;box-sizing:border-box;display:flex;justify-content:center;animation:riseIn .9s .9s both">
+<div style="display:flex;gap:10px;background:rgba(255,255,255,.14);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:10px 12px;align-items:center">
+<span style="font:600 10px Figtree;letter-spacing:.06em;color:rgba(255,255,255,.7);padding:0 6px">DILATIH UNTUK</span>
+<a href="#industri" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;width:72px;padding:8px 4px;border-radius:12px;background:rgba(255,255,255,.92);color:#17181a;font:600 11px Figtree"><span style="width:22px;height:22px;border-radius:7px;background:oklch(0.93 0.06 150)"></span>Klinik</a>
+<a href="#industri" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;width:72px;padding:8px 4px;border-radius:12px;background:rgba(255,255,255,.92);color:#17181a;font:600 11px Figtree"><span style="width:22px;height:22px;border-radius:7px;background:oklch(0.93 0.06 150)"></span>Properti</a>
+<a href="#industri" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;width:72px;padding:8px 4px;border-radius:12px;background:rgba(255,255,255,.92);color:#17181a;font:600 11px Figtree"><span style="width:22px;height:22px;border-radius:7px;background:oklch(0.93 0.06 150)"></span>D2C</a>
+<a href="#industri" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;width:72px;padding:8px 4px;border-radius:12px;background:rgba(255,255,255,.92);color:#17181a;font:600 11px Figtree"><span style="width:22px;height:22px;border-radius:7px;background:oklch(0.93 0.06 150)"></span>Kreator</a>
+</div></div></sc-if>
+
+<div style="position:relative;background:rgba(5,8,26,.7);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08)">
+<div style="max-width:1120px;margin:0 auto;padding:14px 24px;box-sizing:border-box;display:flex;gap:10px 22px;align-items:center;flex-wrap:wrap;font:500 12.5px Figtree;color:rgba(255,255,255,.7)">
+<span style="font:600 11px Figtree;letter-spacing:.05em;color:rgba(255,255,255,.45)">JALAN DI</span>
+<span>Dua brand kesehatan D2C · pilot internal</span><span>WhatsApp Cloud API resmi Meta</span><span>Setup Rp 0</span>
+<sc-if value="{{ showProofSlot }}" hint-placeholder-val="{{ false }}"><span style="margin-left:auto;display:inline-flex;align-items:center;gap:6px;border:1px dashed rgba(255,255,255,.4);border-radius:99px;padding:4px 10px;font:500 11.5px Figtree;color:rgba(255,255,255,.7)"><span style="font:600 9px ui-monospace,monospace;letter-spacing:.05em">SLOT</span>angka pilot, setelah Outcomes diperbaiki</span></sc-if>
+</div>
+</div>
+</section>
+
+<div style="max-width:1120px;margin:0 auto;padding:56px 24px 120px;box-sizing:border-box">
+
+<!-- BANDINGKAN · 7b editorial ledger (Square) -->
+<section id="bandingkan" data-screen-label="Bandingkan" style="margin-bottom:80px;scroll-margin-top:24px">
+<div style="font:600 11px Figtree;color:rgba(0,0,0,.45);letter-spacing:.05em;margin-bottom:10px">BANDINGKAN</div>
+<h2 style="font:600 clamp(28px,3.2vw,38px)/1.1 'Source Serif 4',Georgia,serif;margin:0 0 10px;text-wrap:pretty;max-width:640px">Admin Anda hari ini, versus AI yang tidak tidur.</h2>
+<p style="font:15px/1.5 Figtree;color:rgba(0,0,0,.6);margin:0 0 28px;max-width:640px">Hari ini chat dibalas admin yang juga urus hal lain. Bayangkan satu karyawan yang jaga WhatsApp Anda 24 jam, hafal harga, dan tidak pernah lewat batas yang Anda tulis.</p>
+<div style="display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:28px;padding:20px 0;border-top:1px solid rgba(0,0,0,.1);align-items:center"><div style="height:170px;border-radius:10px;overflow:hidden"><image-slot id="ledger-1" shape="rect" src="{{ rLedger1 }}" placeholder="Foto: owner tertidur, HP masih menyala"></image-slot></div><div style="max-width:640px"><div style="font:600 24px/1.2 'Source Serif 4',Georgia,serif;margin-bottom:8px">Chat jam 11 malam</div><div style="font:17px/1.5 Figtree;color:rgba(0,0,0,.7)">Hari ini dibalas besok pagi. Yang chat sudah lupa siapa Anda. <strong style="color:oklch(0.42 0.12 150)">Dengan AI:</strong> dibalas dalam menit, jam berapa pun.</div></div></div>
+<div style="display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:28px;padding:20px 0;border-top:1px solid rgba(0,0,0,.1);align-items:center"><div style="height:170px;border-radius:10px;overflow:hidden"><image-slot id="ledger-2" shape="rect" src="{{ rLedger2 }}" placeholder="Foto: agen properti menatap HP"></image-slot></div><div style="max-width:640px"><div style="font:600 24px/1.2 'Source Serif 4',Georgia,serif;margin-bottom:8px">"Kok lebih mahal dari sebelah?"</div><div style="font:17px/1.5 Figtree;color:rgba(0,0,0,.7)">Hari ini tergantung mood dan siapa admin yang jaga shift. <strong style="color:oklch(0.42 0.12 150)">Dengan AI:</strong> sesuai aturan Anda. Tidak ada harga dadakan.</div></div></div>
+<div style="display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:28px;padding:20px 0;border-top:1px solid rgba(0,0,0,.1);border-bottom:1px solid rgba(0,0,0,.1);align-items:center"><div style="height:170px;border-radius:10px;overflow:hidden"><image-slot id="ledger-3" shape="rect" src="{{ rLedger3 }}" placeholder="Foto: QRIS terbayar di HP"></image-slot></div><div style="max-width:640px"><div style="font:600 24px/1.2 'Source Serif 4',Georgia,serif;margin-bottom:8px">Minta DP</div><div style="font:17px/1.5 Figtree;color:rgba(0,0,0,.7)">Hari ini kadang. Kalau ingat, dan kalau lagi mood minta. <strong style="color:oklch(0.42 0.12 150)">Dengan AI:</strong> QRIS dikirim di chat itu juga. Slot terkunci. Manusia masuk hanya kalau diminta.</div></div></div>
+<div style="font:12px Figtree;color:rgba(0,0,0,.45);margin-top:14px">Closari bukan pengganti inbox atau CRM. Broadcast, blast, dan integrasi ERP tidak termasuk. Foto ilustrasi.</div>
+</section>
+
+<!-- HARGA · 1d + 1t copy -->
+<section id="harga" data-screen-label="Harga" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center;margin-bottom:80px;scroll-margin-top:24px">
+<div>
+<div style="display:inline-flex;align-items:center;gap:7px;font:600 11px Figtree;letter-spacing:.05em;color:rgba(0,0,0,.6);border:1px solid rgba(0,0,0,.12);border-radius:99px;padding:5px 10px;margin-bottom:14px;white-space:nowrap"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.62 0.17 150)"></span>HARGA</div>
+<h2 style="font:600 clamp(28px,3.2vw,38px)/1.1 'Source Serif 4',Georgia,serif;margin:0 0 20px;text-wrap:pretty">Rp 2.000 per pesan keluar. Chat masuk gratis.</h2>
+<div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px;flex-wrap:wrap"><span style="font:600 48px/1.15 'Source Serif 4',Georgia,serif;letter-spacing:-.02em;white-space:nowrap">Rp 2.000</span><span style="font:15px Figtree;color:rgba(0,0,0,.6)">per pesan keluar</span></div>
+<div style="font:14px/1.5 Figtree;color:rgba(0,0,0,.65);margin-bottom:20px;max-width:440px"><strong style="color:#17181a">1 balasan = 1 pesan yang AI kirim.</strong> Chat masuk gratis. 14 hari pertama gratis.</div>
+<div style="display:flex;flex-direction:column;gap:8px;font:14px/1.45 Figtree;color:rgba(0,0,0,.75);margin-bottom:24px">
+<div>✓ Chat masuk gratis. Tanpa biaya minimum.</div>
+<div>✓ Setup Rp 0. Tanpa kontrak — berhenti kapan saja.</div>
+<div>✓ Layanan Meta sudah termasuk. Tidak ada tagihan lain.</div>
+</div>
+<a href="{{ waHref }}" style="display:inline-block;background:oklch(0.42 0.12 150);color:#fff;text-decoration:none;font:600 15px Figtree;padding:13px 20px;border-radius:11px">Chat di WhatsApp</a>
+<div style="font:12px Figtree;color:rgba(0,0,0,.45);margin-top:14px">Setelah 10 bisnis: tarif tetap Rp 2.000 / balasan. Setup akan diumumkan.</div>
+</div>
+<div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr)">
+<div style="background:oklch(0.96 0.03 150);padding:22px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px 20px">
+<div style="font:600 18px/1.2 'Source Serif 4',Georgia,serif;grid-column:1/-1">Hitung penghematan Anda sebulan.</div>
+<label style="display:flex;flex-direction:column;gap:6px;font:12px Figtree;color:rgba(0,0,0,.6)"><span style="display:flex;justify-content:space-between"><span>Chat masuk / minggu</span><strong style="color:#17181a">{{ estChats }}</strong></span><input type="range" min="20" max="600" step="10" value="{{ estChats }}" sc-camel-on-change="{{ setEstChats }}" sc-camel-on-input="{{ setEstChats }}" style="accent-color:oklch(0.42 0.12 150)"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:12px Figtree;color:rgba(0,0,0,.6)"><span style="display:flex;justify-content:space-between"><span>Balasan AI per chat</span><strong style="color:#17181a">{{ estPer }}</strong></span><input type="range" min="1" max="8" step="1" value="{{ estPer }}" sc-camel-on-change="{{ setEstPer }}" sc-camel-on-input="{{ setEstPer }}" style="accent-color:oklch(0.42 0.12 150)"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:12px Figtree;color:rgba(0,0,0,.6)"><span style="display:flex;justify-content:space-between"><span>Admin yang menjaga chat</span><strong style="color:#17181a">{{ estAdmins }}</strong></span><input type="range" min="0" max="5" step="1" value="{{ estAdmins }}" sc-camel-on-change="{{ setEstAdmins }}" sc-camel-on-input="{{ setEstAdmins }}" style="accent-color:oklch(0.42 0.12 150)"></label>
+<div style="font:11px/1.5 Figtree;color:rgba(0,0,0,.5);grid-column:1/-1">Asumsi biaya admin: {{ adminCostLabel }} / bulan per orang. Angka ilustratif, ubah sesuai kondisi Anda.</div>
+</div>
+<div style="padding:22px 24px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid rgba(0,0,0,.08);padding-bottom:12px"><span style="font:14px Figtree">Balasan sebulan</span><span style="font:600 22px 'Source Serif 4',Georgia,serif;white-space:nowrap">{{ estReplies }}</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid rgba(0,0,0,.08);padding-bottom:12px"><span style="font:14px Figtree">Tagihan Closari<br><span style="font-size:12px;color:rgba(0,0,0,.5)">× Rp 2.000 per balasan</span></span><span style="font:600 22px 'Source Serif 4',Georgia,serif;color:oklch(0.42 0.12 150);white-space:nowrap">{{ estBill }}</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid rgba(0,0,0,.08);padding-bottom:12px"><span style="font:14px Figtree">Biaya admin sekarang</span><span style="font:600 22px 'Source Serif 4',Georgia,serif;color:rgba(0,0,0,.55);white-space:nowrap">{{ estAdminCost }}</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 14px Figtree">Selisih sebulan</span><span style="font:600 clamp(22px,2.4vw,30px) 'Source Serif 4',Georgia,serif;letter-spacing:-.01em;white-space:nowrap;color:oklch(0.42 0.12 150)">{{ estSave }}</span></div>
+<div style="font:11px Figtree;color:rgba(0,0,0,.45)">Chat masuk gratis · Setup Rp 0 · Layanan Meta termasuk · Berhenti kapan saja</div>
+</div>
+</div>
+</section>
+
+<!-- INDUSTRI · 3c: photo bleeds off the right edge, chat overlaps the seam -->
+<section id="industri" data-screen-label="Industri" style="margin-bottom:80px;scroll-margin-top:24px">
+<div style="display:inline-flex;align-items:center;gap:7px;font:600 11px Figtree;letter-spacing:.05em;color:rgba(0,0,0,.6);border:1px solid rgba(0,0,0,.12);border-radius:99px;padding:5px 10px;margin-bottom:14px;white-space:nowrap"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.62 0.17 150)"></span>INDUSTRI</div>
+<h2 style="font:600 clamp(28px,3.2vw,38px)/1.1 'Source Serif 4',Georgia,serif;margin:0 0 20px;text-wrap:pretty;max-width:640px">Klinik, properti, makanan, kreator. Tiap satu punya skema sendiri.</h2>
+<div style="display:flex;gap:8px;margin-bottom:20px;font:500 14px Figtree;flex-wrap:wrap">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4"><button sc-camel-on-click="{{ t.select }}" style="{{ t.style }}">{{ t.name }}</button></sc-for>
+</div>
+<div style="position:relative;background:#17181a;color:#f7f5f0;border-radius:24px;overflow:hidden;min-height:480px">
+<div style="position:absolute;inset:0"><image-slot id="{{ tab.imgId }}" shape="rect" src="{{ tab.imgSrc }}" placeholder="{{ tab.imgHint }}"></image-slot></div>
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,14,30,.92) 0%,rgba(12,14,30,.78) 42%,rgba(12,14,30,.25) 100%);pointer-events:none"></div>
+<div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;padding:clamp(22px,3vw,34px);align-items:end">
+<div style="max-width:480px">
+<h3 style="font:600 clamp(24px,2.6vw,30px)/1.15 'Source Serif 4',Georgia,serif;margin:0 0 12px;text-wrap:pretty">{{ tab.headline }}</h3>
+<p style="font:14.5px/1.5 Figtree;color:rgba(255,255,255,.72);margin:0 0 22px">{{ tab.intro }}</p>
+<div style="display:flex;flex-direction:column;gap:12px;font:14px/1.4 Figtree">
+<sc-for list="{{ tab.caps }}" as="c" hint-placeholder-count="3"><div style="display:flex;gap:12px;border-top:1px solid rgba(255,255,255,.14);padding-top:10px"><span style="font:600 11px ui-monospace,monospace;color:oklch(0.8 0.15 150);margin-top:3px">{{ c.k }}</span><div><strong>{{ c.t }}</strong><br><span style="color:rgba(255,255,255,.65)">{{ c.d }}</span></div></div></sc-for>
+</div>
+<div style="display:flex;gap:16px;align-items:center;margin-top:24px;flex-wrap:wrap"><a href="{{ tab.wa }}" style="background:#fff;color:#17181a;text-decoration:none;font:600 14px Figtree;padding:11px 16px;border-radius:10px">Lamar · {{ tab.name }}</a><a href="{{ waAskHref }}" style="font:500 14px Figtree;color:rgba(255,255,255,.8)">Tanya soal {{ tab.lower }} →</a></div>
+</div>
+<div style="justify-self:end;width:100%;max-width:290px;background:#0c0e1e;border-radius:34px;padding:10px;box-shadow:0 40px 80px rgba(0,0,0,.5)">
+<div style="background:#f7f5f0;color:#17181a;border-radius:26px;padding:14px 12px 16px;font:12.5px/1.4 Figtree;display:flex;flex-direction:column;gap:7px">
+<div style="width:40px;height:5px;border-radius:3px;background:rgba(0,0,0,.15);margin:0 auto 6px"></div>
+<div style="font:600 10.5px Figtree;color:rgba(0,0,0,.5);margin-bottom:2px">{{ tab.chatHead }}</div>
+<sc-for list="{{ tab.chat }}" as="m" hint-placeholder-count="5"><div style="{{ m.style }}">{{ m.text }}</div></sc-for>
+<div style="align-self:center;font:600 10.5px Figtree;color:oklch(0.42 0.12 150);background:oklch(0.96 0.03 150);padding:4px 9px;border-radius:99px;margin-top:4px">{{ tab.result }}</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CARA KERJA · 5f stopwatch -->
+<section data-screen-label="Cara kerja" style="margin-bottom:80px">
+<div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:20px;padding:32px 34px">
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;align-items:center">
+<div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+<div style="width:190px;height:190px;border-radius:50%;background:conic-gradient(oklch(0.42 0.12 150) 0turn {{ setupTurn }}turn,#ece9e1 {{ setupTurn }}turn 1turn);display:grid;place-items:center">
+<div style="width:148px;height:148px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center">
+<div><div style="font:600 46px/1.1 'Source Serif 4',Georgia,serif;letter-spacing:-.02em">{{ setupTotal }}</div><div style="font:600 10.5px Figtree;color:rgba(0,0,0,.5);letter-spacing:.06em;margin-top:4px">SETUP SELESAI</div></div>
+</div>
+</div>
+<div style="font:600 11.5px Figtree;color:oklch(0.42 0.12 150);background:oklch(0.96 0.03 150);padding:5px 11px;border-radius:99px">AI live</div>
+</div>
+<div>
+<div style="display:inline-flex;align-items:center;gap:7px;font:600 11px Figtree;letter-spacing:.05em;color:rgba(0,0,0,.6);border:1px solid rgba(0,0,0,.12);border-radius:99px;padding:5px 10px;margin-bottom:14px;white-space:nowrap"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.62 0.17 150)"></span>CARA KERJA</div>
+<h2 style="font:600 clamp(26px,3vw,34px)/1.1 'Source Serif 4',Georgia,serif;margin:0 0 18px;text-wrap:pretty">Empat isian, lalu AI Anda jalan di WhatsApp.</h2>
+<div style="display:flex;flex-direction:column;gap:12px;font:14px/1.45 Figtree">
+<div style="display:flex;gap:10px;align-items:flex-start"><span style="color:oklch(0.42 0.12 150);font-weight:600">✓</span><div><strong>Nomor WhatsApp bisnis</strong> <span style="color:rgba(0,0,0,.5)">· {{ t1 }}</span><br><span style="color:rgba(0,0,0,.6)">WABA sudah ada atau belum, dua-duanya bisa.</span></div></div>
+<div style="display:flex;gap:10px;align-items:flex-start"><span style="color:oklch(0.42 0.12 150);font-weight:600">✓</span><div><strong>Bank jawaban</strong> <span style="color:rgba(0,0,0,.5)">· {{ t2 }}</span><br><span style="color:rgba(0,0,0,.6)">Pertanyaan yang sering masuk, dengan jawaban yang Anda tulis sendiri.</span></div></div>
+<div style="display:flex;gap:10px;align-items:flex-start"><span style="color:oklch(0.42 0.12 150);font-weight:600">✓</span><div><strong>Katalog dan harga</strong> <span style="color:rgba(0,0,0,.5)">· {{ t3 }}</span><br><span style="color:rgba(0,0,0,.6)">Yang dijual, syaratnya, nominal DP, cara ambil pembayaran.</span></div></div>
+<div style="display:flex;gap:10px;align-items:flex-start"><span style="color:oklch(0.42 0.12 150);font-weight:600">✓</span><div><strong>Aturan oper ke admin</strong> <span style="color:rgba(0,0,0,.5)">· {{ t4 }}</span><br><span style="color:rgba(0,0,0,.6)">Pertanyaan medis, nego, komplain — dan siapa yang terima operan.</span></div></div>
+</div>
+<div style="font:12.5px/1.5 Figtree;color:rgba(0,0,0,.55);margin-top:16px;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">Setelah live, keempatnya tetap bisa Anda ubah sendiri. Perubahan berlaku di percakapan berikutnya. Waktu di atas adalah perkiraan dari uji internal.</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ · 6b centred narrow column -->
+<section id="faq" data-screen-label="FAQ" style="margin-bottom:80px;scroll-margin-top:24px">
+<div style="max-width:620px;margin:0 auto">
+<div style="text-align:center"><div style="display:inline-flex;align-items:center;gap:7px;font:600 11px Figtree;letter-spacing:.05em;color:rgba(0,0,0,.6);border:1px solid rgba(0,0,0,.12);border-radius:99px;padding:5px 10px;margin-bottom:14px;white-space:nowrap"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.62 0.17 150)"></span>FAQ</div></div>
+<h2 style="text-align:center;font:600 clamp(26px,3vw,34px)/1.1 'Source Serif 4',Georgia,serif;margin:0 0 26px;text-wrap:pretty">Pertanyaan yang sering masuk.</h2>
+<div style="border-top:1px solid rgba(0,0,0,.1)">
+<sc-for list="{{ faq }}" as="q" hint-placeholder-count="6">
+<div style="border-bottom:1px solid rgba(0,0,0,.1)">
+<button sc-camel-on-click="{{ q.toggle }}" style="all:unset;display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:16px 0;font:600 15px Figtree;cursor:pointer;color:#17181a;box-sizing:border-box"><span>{{ q.q }}</span><span style="font:400 20px Figtree;color:rgba(0,0,0,.35)">{{ q.icon }}</span></button>
+<sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}"><div style="font:14px/1.55 Figtree;color:rgba(0,0,0,.6);padding:0 0 16px;text-wrap:pretty">{{ q.a }}</div></sc-if>
+</div>
+</sc-for>
+</div>
+<div style="font:13.5px/1.55 Figtree;color:rgba(0,0,0,.55);margin-top:18px">Masih ada pertanyaan? <a href="{{ waAskHref }}">Tanya di WhatsApp</a>. Yang jawab AI Closari.</div>
+</div>
+</section>
+
+
+<!-- CLOSING · night sky -->
+<section data-screen-label="Penutup" style="position:relative;border-radius:24px;overflow:hidden;background:#0c0e1e;color:#fff;min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-bottom:28px">
+<div style="position:absolute;inset:0"><image-slot id="closing-night" shape="rect" src="{{ rSkyNight }}" placeholder="Ilustrasi: Jakarta malam"></image-slot></div>
+<div style="position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 60%,rgba(5,8,26,.55),rgba(5,8,26,.15));pointer-events:none"></div>
+<div style="position:relative;width:100%;max-width:1040px;box-sizing:border-box;padding:56px 22px 0;text-align:left" data-screen-label="Batas">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;align-items:end;margin-bottom:36px">
+<h2 style="font:400 clamp(26px,3vw,36px)/1.15 'Source Serif 4',Georgia,serif;margin:0;text-wrap:pretty;letter-spacing:-.01em">Lima hal yang AI tidak akan lakukan, apapun chatnya.</h2>
+<p style="font:14px/1.55 Figtree;color:rgba(255,255,255,.65);margin:0;max-width:420px">Anda menulis batasnya di pack. AI tidak menebak di luar itu, dan setiap percakapan tercatat untuk Anda baca.</p>
+</div>
+<div style="display:grid;grid-template-columns:{{ batasCols }};gap:0 18px">
+<div style="padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.22);min-height:{{ batasMinH }};display:flex;flex-direction:column;justify-content:space-between;gap:14px"><div style="font:400 13px 'Source Serif 4',Georgia,serif;color:rgba(255,255,255,.55)">01</div><div style="font:500 14.5px/1.4 Figtree">Tidak nekat kasih harga atau diskon di luar katalog</div></div>
+<div style="padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.22);min-height:{{ batasMinH }};display:flex;flex-direction:column;justify-content:space-between;gap:14px"><div style="font:400 13px 'Source Serif 4',Georgia,serif;color:rgba(255,255,255,.55)">02</div><div style="font:500 14.5px/1.4 Figtree">Tidak memberi saran medis, hukum, atau keuangan</div></div>
+<div style="padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.22);min-height:{{ batasMinH }};display:flex;flex-direction:column;justify-content:space-between;gap:14px"><div style="font:400 13px 'Source Serif 4',Georgia,serif;color:rgba(255,255,255,.55)">03</div><div style="font:500 14.5px/1.4 Figtree">Oper ke manusia begitu yang chat meminta</div></div>
+<div style="padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.22);min-height:{{ batasMinH }};display:flex;flex-direction:column;justify-content:space-between;gap:14px"><div style="font:400 13px 'Source Serif 4',Georgia,serif;color:rgba(255,255,255,.55)">04</div><div style="font:500 14.5px/1.4 Figtree">Setiap chat tercatat dan bisa Anda baca</div></div>
+<div style="padding:22px 0 26px;border-top:1px solid rgba(255,255,255,.22);min-height:{{ batasMinH }};display:flex;flex-direction:column;justify-content:space-between;gap:14px"><div style="font:400 13px 'Source Serif 4',Georgia,serif;color:rgba(255,255,255,.55)">05</div><div style="font:500 14.5px/1.4 Figtree">Berjalan di WhatsApp Cloud API resmi Meta. Tanpa nomor pribadi.</div></div>
+</div>
+</div>
+<div style="position:relative;padding:56px 22px;max-width:640px;box-sizing:border-box">
+<div style="display:inline-flex;align-items:center;gap:7px;font:600 11px Figtree;letter-spacing:.05em;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:5px 10px;margin-bottom:18px;white-space:nowrap"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.7 0.17 150)"></span>10 BISNIS PERTAMA · DIBUKA</div>
+<h2 style="font:600 clamp(30px,4vw,48px)/1.06 'Source Serif 4',Georgia,serif;letter-spacing:-.015em;margin:0 0 16px;text-wrap:pretty;text-shadow:0 2px 24px rgba(0,0,0,.3)">14 hari gratis. Setup Rp 0. Berhenti kapan saja.</h2>
+<p style="font:16px/1.5 Figtree;color:rgba(255,255,255,.75);margin:0 0 26px">Kami baca satu-satu. Kalau cocok, kami balas. Kalau belum, kami bilang belum.</p>
+<a href="{{ waHref }}" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#17181a;text-decoration:none;font:600 16px Figtree;padding:15px 24px;border-radius:12px"><span style="width:16px;height:16px;border-radius:50%;background:oklch(0.62 0.17 150);display:inline-block"></span>Chat di WhatsApp</a>
+<div style="font:12.5px Figtree;color:rgba(255,255,255,.55);margin-top:14px">14 hari gratis · Rp 2.000 / balasan · Setup Rp 0 · berhenti kapan saja</div>
+</div>
+</section>
+<footer data-screen-label="Footer" style="padding:40px 0 0;overflow:hidden">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:28px;font:14px/1.9 Figtree;color:rgba(0,0,0,.65);margin-bottom:40px">
+<div><div style="font:600 11px Figtree;letter-spacing:.05em;color:rgba(0,0,0,.45);margin-bottom:6px">PRODUK</div><a href="#industri" style="display:block;color:inherit;text-decoration:none">Industri</a><a href="#bandingkan" style="display:block;color:inherit;text-decoration:none">Bandingkan</a><a href="#harga" style="display:block;color:inherit;text-decoration:none">Harga</a><a href="#faq" style="display:block;color:inherit;text-decoration:none">FAQ</a></div>
+<div><div style="font:600 11px Figtree;letter-spacing:.05em;color:rgba(0,0,0,.45);margin-bottom:6px">PERUSAHAAN</div><a href="{{ waAskHref }}" style="display:block;color:inherit;text-decoration:none">Kontak via WhatsApp</a><a href="mailto:halo@closari.id" style="display:block;color:inherit;text-decoration:none">halo@closari.id</a><span style="display:block">Jakarta</span></div>
+<div><div style="font:600 11px Figtree;letter-spacing:.05em;color:rgba(0,0,0,.45);margin-bottom:6px">LEGAL</div><a href="https://closari.app/kebijakan-privasi" style="display:block;color:inherit;text-decoration:none">Kebijakan privasi</a><a href="https://closari.app/ketentuan-layanan" style="display:block;color:inherit;text-decoration:none">Syarat layanan</a><a href="https://closari.app/hapus-data" style="display:block;color:inherit;text-decoration:none">Penanganan data percakapan</a></div>
+<div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:16px 18px;grid-column:{{ footerCtaSpan }};min-width:0"><div style="font:13px/1.5 Figtree;color:rgba(0,0,0,.65);margin-bottom:10px"><strong style="color:#17181a">Lamar 10 Bisnis Pertama</strong> dan AI Anda berjalan dalam lima menit.</div><a href="{{ waHref }}" style="display:flex;justify-content:center;background:oklch(0.42 0.12 150);color:#fff;text-decoration:none;font:600 14px Figtree;padding:11px;border-radius:9px">Chat di WhatsApp</a><div style="font:11.5px Figtree;color:rgba(0,0,0,.45);margin-top:8px;text-align:center">14 hari gratis · Rp 2.000 / balasan · Setup Rp 0</div></div>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:12px Figtree;color:rgba(0,0,0,.45);padding:18px 0 0;border-top:1px solid rgba(0,0,0,.1);margin-top:8px"><span>© 2026 Closari · Jakarta · Independent of Meta Platforms</span><span>WhatsApp Cloud API resmi Meta, di-host Closari</span></div>
+</footer>
+</div>
+
+<!-- FLOATING NAV · appears after hero -->
+<div style="position:fixed;top:14px;left:0;right:0;display:flex;justify-content:center;z-index:11;pointer-events:none;opacity:{{ navOpacity }};transform:translateY({{ navShift }});transition:opacity .25s ease,transform .25s ease">
+<div style="pointer-events:auto;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(0,0,0,.08);border-radius:99px;padding:6px 6px 6px 16px;box-shadow:0 10px 30px rgba(0,0,0,.1);font:500 13px Figtree;color:rgba(0,0,0,.7);max-width:calc(100vw - 32px)">
+<a href="#top" style="font:600 16px 'Source Serif 4',Georgia,serif;color:#17181a;text-decoration:none;margin-right:8px">Closari</a>
+<sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}"><a href="#industri" style="color:inherit;text-decoration:none;padding:6px 10px;border-radius:99px" style-hover="background:rgba(0,0,0,.06)">Industri</a><a href="#bandingkan" style="color:inherit;text-decoration:none;padding:6px 10px;border-radius:99px" style-hover="background:rgba(0,0,0,.06)">Bandingkan</a><a href="#harga" style="color:inherit;text-decoration:none;padding:6px 10px;border-radius:99px" style-hover="background:rgba(0,0,0,.06)">Harga</a><a href="#faq" style="color:inherit;text-decoration:none;padding:6px 10px;border-radius:99px" style-hover="background:rgba(0,0,0,.06)">FAQ</a></sc-if>
+<a href="{{ waHref }}" style="margin-left:6px;background:#17181a;color:#fff;text-decoration:none;font:600 13px Figtree;padding:9px 14px;border-radius:99px;white-space:nowrap">Chat di WhatsApp</a>
+</div>
+</div>
+
+<!-- STICKY · 1h -->
+<div style="position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;align-items:flex-end;gap:8px;z-index:10">
+<sc-if value="{{ showPillNote }}" hint-placeholder-val="{{ true }}"><div style="background:#fff;border:1px solid rgba(0,0,0,.09);border-radius:14px 14px 4px 14px;padding:10px 12px;font:12px/1.4 Figtree;box-shadow:0 6px 20px rgba(0,0,0,.1);max-width:220px">Kirim ini ke Closari:<br><em style="color:rgba(0,0,0,.7)">"Halo Closari, saya mau lamar 10 Bisnis Pertama."</em></div></sc-if>
+<a href="{{ waHref }}" style="display:inline-flex;align-items:center;gap:8px;background:oklch(0.42 0.12 150);color:#fff;text-decoration:none;font:600 14px Figtree;padding:13px 18px;border-radius:99px;box-shadow:0 6px 20px rgba(0,0,0,.18)"><span style="width:14px;height:14px;border-radius:50%;background:oklch(0.7 0.17 150);display:inline-block"></span>Chat AI</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;heroWindows&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;fan&quot;,&quot;options&quot;:[&quot;fan&quot;,&quot;devices&quot;,&quot;dock&quot;],&quot;tsType&quot;:&quot;'fan' | 'devices' | 'dock'&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showProofSlot&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;adminCostPerMonth&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:3500000,&quot;min&quot;:1000000,&quot;max&quot;:15000000,&quot;step&quot;:100000,&quot;unit&quot;:&quot;Rp&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Harga&quot;},&quot;setupNomor&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:40,&quot;min&quot;:5,&quot;max&quot;:300,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Cara kerja&quot;},&quot;setupKnowledge&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:110,&quot;min&quot;:10,&quot;max&quot;:600,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Cara kerja&quot;},&quot;setupKatalog&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:80,&quot;min&quot;:10,&quot;max&quot;:600,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Cara kerja&quot;},&quot;setupEskalasi&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:51,&quot;min&quot;:5,&quot;max&quot;:300,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Cara kerja&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0, tab: 0, vert: 0, showPillNote: true, scrolled: false, estChats: 90, estPer: 3, estAdmins: 3 };
+  componentDidMount() {
+    this._t = setTimeout(() => this.setState({ showPillNote: false }), 6000);
+    this._onScroll = () => {
+      const p = Math.min(1, Math.max(0, window.scrollY / (window.innerHeight * 0.9)));
+      if (Math.abs(p - (this.state.p || 0)) > 0.01) this.setState({ p });
+    };
+    this._onResize = () => this.setState({ narrow: window.innerWidth < 860 });
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    window.addEventListener("resize", this._onResize);
+    this._onResize(); this._onScroll();
+    this._playVideo = () => { const v = this.videoRef.current; if (v) { v.muted = true; v.loop = true; v.play().catch(() => {}); } };
+    this._playVideo(); setTimeout(this._playVideo, 800);
+  }
+  videoRef = React.createRef();
+  componentWillUnmount() { clearTimeout(this._t); window.removeEventListener("scroll", this._onScroll); window.removeEventListener("resize", this._onResize); }
+  renderVals() {
+    const R = k => (window.__resources && window.__resources[k]) || ({skyDusk:"./assets/sky-dusk.webp",skyNight:"./assets/sky-night.webp",heroVideo:"https://d8j0ntlcm91z4.cloudfront.net/user_3Hna9jVphZqKyMgrUcsTBUkaJT1/hf_20260910_150721_a9d67273-316c-4195-b376-7bcabe67756b.mp4",ledger1:"./assets/ledger-film-1.webp",ledger2:"./assets/ledger-film-2.webp",ledger3:"./assets/ledger-film-3.webp",indKlinik:"./assets/ind-klinik.webp",indProperti:"./assets/ind-properti.webp",indMakanan:"./assets/ind-makanan.webp",indKreator:"./assets/ind-kreator.webp"})[k];
+    const NUM = "6287893780427";
+    const wa = t => "https://wa.me/" + NUM + "?text=" + encodeURIComponent(t);
+    const qs = [
+      ["Apa itu satu balasan?", "Satu balasan = satu pesan yang AI kirim ke yang chat. Pesan masuk dari yang chat tidak dihitung."],
+      ["Bagaimana dengan biaya layanan Meta?", "Mulai 1 Oktober 2026, biaya layanan Meta dihitung per pesan. Biaya itu sudah masuk di dalam Rp 2.000 per pesan keluar. Tidak ada tagihan terpisah."],
+      ["Kami belum punya WABA.", "Tidak masalah. AI jalan di Cloud API yang kami host. Kalau WABA Anda sudah ada, kami sesuaikan saat onboarding."],
+      ["Berapa lama sampai jalan?", "Anda punya 7 hari kerja untuk mengisi empat isian: nomor WhatsApp, bank jawaban, katalog, dan aturan oper ke admin. Lewat 7 hari kerja, slot hangus."],
+      ["Bisa berhenti kapan saja?", "Bisa. Tidak ada kontrak dan tidak ada biaya keluar."],
+      ["Cocok untuk bisnis seperti apa?", "Pertimbangan tinggi, inbound sudah di WhatsApp: klinik, course, properti, D2C, influencer commerce."]
+    ];
+    const IN = "align-self:flex-start;max-width:88%;flex-shrink:0;background:#fff;padding:7px 11px;border-radius:10px 10px 10px 3px";
+    const OUT = "align-self:flex-end;max-width:88%;flex-shrink:0;background:oklch(0.93 0.06 150);padding:7px 11px;border-radius:10px 10px 3px 10px";
+    const T = [
+      { name: "Klinik", lower: "klinik", headline: "Dari \u201cdok masih praktik?\u201d ke jadwal terkunci, tanpa admin balas satu-satu.", intro: "AI kualifikasi kebutuhan, jawab keberatan harga dengan alasan yang klinik setujui, lalu kunci slot dengan DP QRIS. Dokter dan admin masuk hanya saat diminta.",
+        caps: [["K.1", "Kualifikasi kebutuhan", "Dua\u2013tiga pertanyaan penentu, lalu arahkan ke jadwal konsultasi yang tepat."], ["K.2", "Harga dan keberatan", "Alasan yang klinik setujui di pack. Tidak banting harga."], ["K.3", "Booking + DP QRIS", "Kunci slot dengan DP di dalam chat."]],
+        chatHead: "+62 812-xxxx-xx31 \u00b7 dari iklan IG", result: "\u2713\u2713 DP masuk \u00b7 Kamis 16.00 terkunci",
+        chat: [[0, "yg buat rahang tirus brp ya kak"], [1, "Biar cepat: yang ingin dibahas area rahang ya? Dokter yang menentukan treatment saat konsultasi."], [0, "ramping aja, minggu ini, jaksel"], [0, "tapi kok lebih mahal dari klinik sebelah"], [1, "Wajar dibandingkan. Harga sudah termasuk konsultasi dokter dan satu kunjungan kontrol."], [0, "oke DP aja dulu"], [1, "Slot Kamis 16.00, Vestra Senopati. DP lewat QRIS di bawah."]] },
+      { name: "Properti", lower: "properti", headline: "Pemisah yang iseng dan yang serius, sebelum agen buang bensin.", intro: "AI kualifikasi budget, cara bayar, dan waktu pindah, lalu menjadwalkan survei ke slot agen yang tepat. Agen datang untuk orang yang memang siap.",
+        caps: [["P.1", "Kualifikasi budget dan cara bayar", "Cash atau KPR, waktu pindah, sebelum agen menyisihkan waktu."], ["P.2", "Cocokkan unit dari listing", "Unit yang benar-benar cocok, bukan seluruh katalog."], ["P.3", "Jadwal survei + booking fee", "Kunci jadwal dan ambil booking fee lewat QRIS."]],
+        chatHead: "+62 811-xxxx-xx24 \u00b7 dari iklan listing", result: "\u2713\u2713 Booking fee masuk \u00b7 survei Sabtu 10.00",
+        chat: [[0, "pak ini yg 2BR di bintaro masih ada?"], [1, "Masih ada dua unit. Rencananya cash atau KPR?"], [0, "KPR, DP 200an, pindah akhir tahun"], [1, "Dua unit cocok: hadap timur lantai 12, dan corner lantai 8."], [0, "bisa lihat unitnya sabtu?"], [1, "Sabtu 10.00 dengan Pak Andre. Booking fee lewat QRIS di bawah."]] },
+      { name: "D2C Makanan", lower: "brand makanan", headline: "Dari \u201cmenu apa saja\u201d ke QRIS terkirim, tanpa admin ketik ulang.", intro: "AI menjawab pertanyaan rasa, halal, dan pengiriman, mengambil order lewat QRIS, lalu mengingatkan pelanggan saat stoknya diperkirakan habis.",
+        caps: [["D.1", "Jawab rasa, halal, komposisi", "Dari daftar yang Anda tulis, bukan improvisasi."], ["D.2", "Ongkir dan area kirim", "Dihitung sebelum pelanggan kecewa di akhir percakapan."], ["D.3", "Ambil order + QRIS", "Kunci order di chat yang sama, bukan marketplace."]],
+        chatHead: "+62 812-xxxx-xx19 \u00b7 dari katalog", result: "\u2713\u2713 Pembayaran masuk \u00b7 order masuk produksi",
+        chat: [[0, "kak ini halal? isinya ayam apa sapi"], [1, "Semua varian ayam dan sapi, tanpa babi dan tanpa alkohol."], [0, "kirim ke bandung bisa? ongkir brp"], [1, "Bisa, kurir beku Selasa atau Jumat. Ongkir per box, 4\u20136 pack satu box."], [0, "oke aku ambil 6 pack yg original"], [1, "Siap. Total termasuk ongkir satu box \u2014 QRIS di bawah."]] },
+      { name: "Influencer", lower: "akun kreator", headline: "DM masuk malam, dijawab, order ditutup. Anda bangun pagi, transaksi sudah jalan.", intro: "AI mengarahkan penanya ke produk atau kelas yang tepat, menjawab keraguan, lalu mengambil pembayaran QRIS tanpa memindahkan orang ke tempat lain.",
+        caps: [["I.1", "Arahkan ke produk yang tepat", "Satu pilihan, bukan seluruh linktree."], ["I.2", "Jawab keraguan dan harga", "\u201cCocok gak buat aku\u201d dijawab dengan alasan dari pack."], ["I.3", "Ambil pembayaran QRIS", "Selesai di chat yang sama."]],
+        chatHead: "+62 895-xxxx-xx14 \u00b7 dari link bio", result: "\u2713\u2713 Pembayaran masuk \u00b7 akses terkirim",
+        chat: [[0, "kak aku mau belajar dari nol, ambil yg mana ya"], [1, "Kalau dari nol, Kelas Dasar dulu \u2014 enam sesi rekaman plus template."], [0, "tapi harganya lumayan ya"], [1, "Tidak ada diskon di luar daftar. Bayar penuh dapat template dan grup tanya-jawab."], [0, "oke aku ambil yg dasar"], [1, "Pembayaran lewat QRIS di bawah. Begitu masuk, akses dan link grup saya kirim."]] }
+    ];
+    const V = ["Klinik", "Course", "Properti", "D2C", "Kreator"];
+    const { open, tab, vert } = this.state;
+    const cur = T[tab];
+    const pill = on => (on ? "border:1px solid #17181a;background:#17181a;color:#fff;" : "background:#fff;border:1px solid rgba(0,0,0,.14);color:rgba(0,0,0,.7);") + "padding:8px 14px;border-radius:99px;font:500 14px Figtree;cursor:pointer;white-space:nowrap;box-sizing:border-box";
+    const p = this.state.p || 0;
+    const { estChats, estPer, estAdmins } = this.state;
+    const rp = n => "Rp " + Math.round(n).toLocaleString("id-ID");
+    const estReplies = Math.round(estChats * estPer * 52 / 12);
+    const adminCost = this.props.adminCostPerMonth ?? 3500000;
+    const estBillN = estReplies * 2000, estAdminN = estAdmins * adminCost;
+    const secs = [this.props.setupNomor ?? 40, this.props.setupKnowledge ?? 110, this.props.setupKatalog ?? 80, this.props.setupEskalasi ?? 51];
+    const mmss = s => Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+    const total = secs.reduce((a, b) => a + b, 0);
+    return {
+      adminCostLabel: rp(adminCost),
+      t1: mmss(secs[0]), t2: mmss(secs[1]), t3: mmss(secs[2]), t4: mmss(secs[3]),
+      setupTotal: mmss(total), setupTurn: Math.min(1, total / 360).toFixed(2),
+      showProofSlot: this.props.showProofSlot ?? false,
+      batasCols: this.state.narrow ? "1fr" : "repeat(5,minmax(0,1fr))", batasMinH: this.state.narrow ? "0" : "150px", footerCtaSpan: this.state.narrow ? "auto" : "span 2",
+      navOpacity: p > 0.85 ? 1 : 0, navShift: p > 0.85 ? "0" : "-12px", wide: !this.state.narrow,
+      ledgerHeadDisplay: this.state.narrow ? "none" : "grid",
+      ledgerBorder: this.state.narrow ? "0" : "1px solid rgba(0,0,0,.09)",
+      estChats, estPer, estAdmins, estReplies: estReplies.toLocaleString("id-ID"),
+      estBill: rp(estBillN), estAdminCost: rp(estAdminN),
+      estSave: (estAdminN - estBillN >= 0 ? "hemat " : "lebih ") + rp(Math.abs(estAdminN - estBillN)),
+      setEstChats: e => this.setState({ estChats: +e.target.value }),
+      setEstPer: e => this.setState({ estPer: +e.target.value }),
+      setEstAdmins: e => this.setState({ estAdmins: +e.target.value }),
+      videoRef: this.videoRef,
+      nightOpacity: (0.12 + p * 0.8).toFixed(3),
+      riseY: Math.round(-p * 60),
+      sideDisplay: this.state.narrow ? "none" : "block",
+      isFan: (this.props.heroWindows ?? "fan") === "fan",
+      isDevices: (this.props.heroWindows ?? "fan") === "devices",
+      isDock: (this.props.heroWindows ?? "fan") === "dock",
+      waHref: wa("Halo Closari, saya mau lamar 10 Bisnis Pertama."),
+      waAskHref: wa("Halo Closari, saya ada pertanyaan."),
+      waApplyHref: wa("Halo Closari, saya mau lamar 10 Bisnis Pertama. Vertikal: " + V[vert] + "."),
+      showPillNote: this.state.showPillNote,
+      rSkyDusk: R("skyDusk"), rSkyNight: R("skyNight"), rHeroVideo: R("heroVideo"), rLedger1: R("ledger1"), rLedger2: R("ledger2"), rLedger3: R("ledger3"),
+      tabs: T.map((t, i) => ({ name: t.name, style: pill(i === tab), select: () => this.setState({ tab: i }) })),
+      tab: { ...cur, imgId: "ind-" + cur.lower.replace(/\s+/g, "-"), imgSrc: R([ "indKlinik","indProperti","indMakanan","indKreator" ][tab]), imgHint: "Foto: " + ["ruang tindakan klinik, terang", "marketing gallery atau unit sekunder", "dapur produksi, packing box beku", "kreator merekam kelas di rumah"][tab] + " — bukan pelanggan", wa: wa("Halo Closari, saya mau lamar 10 Bisnis Pertama. Vertikal: " + cur.name + "."),
+        caps: cur.caps.map(([k, t, d]) => ({ k, t, d })),
+        chat: cur.chat.map(([o, text]) => ({ text, style: o ? OUT : IN })) },
+      verts: V.map((name, i) => ({ name, style: pill(i === vert).replace(/14px Figtree/, "13px Figtree").replace(/8px 14px/g, "7px 12px"), select: () => this.setState({ vert: i }) })),
+      faq: qs.map(([q, a], i) => ({ q, a, open: open === i, icon: open === i ? "\u2212" : "+", toggle: () => this.setState({ open: open === i ? -1 : i }) }))
+    };
+  }
+}
+</script>
+
+
+</body></html>
